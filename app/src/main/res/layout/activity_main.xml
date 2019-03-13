@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coordinate"
+    tools:context="com.valyrian.scanandpay.MainActivity">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#069ADC"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </android.support.design.widget.AppBarLayout>
+    <include layout="@layout/content_main" />
+    <!--<android.support.design.widget.FloatingActionButton-->
+    <!--android:id="@+id/fab"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="@dimen/fab_margin"-->
+    <!--android:tint="@android:color/white"-->
+    <!--android:layout_gravity="bottom|right"-->
+    <!--app:srcCompat="@android:drawable/ic_search_category_default" />-->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:layout_gravity="bottom|left"
+        android:layout_alignParentBottom="true"
+        >
+        <Button
+            android:id="@+id/fab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/LinearLayout02"
+            android:layout_weight="1"
+            android:background="#069ADC"
+            android:textColor="#FFFFFF"
+            android:text="Scan Item"></Button>
+        <LinearLayout
+            android:id="@+id/LinearLayout02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            >
+            <Button
+                android:id="@+id/checkout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pay Now"
+                android:onClick="checkout"
+                android:background="#45494f"
+                android:textColor="#FFFFFF"
+                android:layout_margin="5dp"
+
+                ></Button>
+            <Button
+                android:id="@+id/totalPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Total Price : $0.0"
+                android:clickable="false"
+                android:layout_margin="5dp"
+                android:background="#45494f"
+                android:textColor="#FFFFFF"
+                ></Button>
+            <!--<TextView-->
+            <!--android:id="@+id/textViewPrice"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="#E0E0E0"-->
+            <!--android:focusable="true"-->
+            <!--android:focusableInTouchMode="true"-->
+            <!--android:paddingLeft="6dp"-->
+            <!--android:paddingTop="8dp"-->
+            <!--android:paddingRight="6dp"-->
+            <!--android:paddingBottom="8dp"-->
+            <!--android:text="$0.0"-->
+            <!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"-->
+            <!--android:textSize="15sp"-->
+            <!--android:layout_toRightOf="@+id/checkout"-->
+            <!--/>-->
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
